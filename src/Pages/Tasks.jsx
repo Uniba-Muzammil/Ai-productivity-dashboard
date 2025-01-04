@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const Tasks = ({ tasks, setTasks }) => {
-  const [newTask, setNewTask] = useState('');
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem('tasks');
+    return saved ? JSON.parse(saved) : [];
+  });
   const [suggestions, setSuggestions] = useState([]);
 
   const addTask = () => {
