@@ -13,7 +13,7 @@ function App() {
   
   return (
     <Router>
-      <div className="flex h-screen">
+      <div className="flex relative min-h-screen">
         <Sidebar />
         <div className="flex-1 flex flex-col">
           <Header />
@@ -27,9 +27,11 @@ function App() {
               <Route path="/analytics" element={<TaskAnalytics tasks={tasks} />} /> {/* New route for analytics */}
             </Routes>
           </main>
+        
           <Footer />
+          </div>
         </div>
-      </div>
+     
     </Router>
   );
 }

@@ -35,7 +35,7 @@ const Dashboard = ({ tasks }) => {
 
       {/* AI Suggestions */}
       <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-lg shadow-md mb-10">
-        <h3 className="text-2xl font-bold mb-4 text-gray-700">AI Productivity Suggestions</h3>
+        <h3 className="text-2xl font-bold mb-4 text-gray-700"> Productivity Suggestions</h3>
         <ul className="list-disc pl-6 space-y-2 text-gray-600">
           {tasks.length === 0 ? (
             <li className="text-md">You don’t have any tasks yet. Start by adding one!</li>

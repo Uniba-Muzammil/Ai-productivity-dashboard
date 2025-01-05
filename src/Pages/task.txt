@@ -41,9 +41,7 @@ const Tasks = ({ tasks, setTasks }) => {
   };
 
   const deleteTask = (id) => {
-    const updatedTasks = tasks.filter((task) => task.id !== id);
-    setTasks(updatedTasks);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks)); // Save updated tasks to localStorage
+    setTasks(tasks.filter((task) => task.id !== id));
   };
 
   const generateTaskSuggestions = () => {
@@ -119,7 +117,7 @@ const Tasks = ({ tasks, setTasks }) => {
               Delete
             </button>
 
-            {/* Completion Button */}
+            {/* Completion Button (Placed on the Right) */}
             <button
               onClick={() => toggleTaskCompletion(task.id)}
               className={`px-4 py-2 rounded-r-lg ${
@@ -134,7 +132,7 @@ const Tasks = ({ tasks, setTasks }) => {
 
       {/* AI Suggestions */}
       <div className="mt-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-semibold mb-4"> Suggestions:</h3>
+        <h3 className="text-xl font-semibold mb-4">AI Suggestions:</h3>
         <ul className="list-disc pl-6">
           {suggestions.map((suggestion, index) => (
             <li key={index} className="text-md">{suggestion}</li>
@@ -146,10 +144,3 @@ const Tasks = ({ tasks, setTasks }) => {
 };
 
 export default Tasks;
-
-
-
-
-
-
-
