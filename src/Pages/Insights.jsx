@@ -50,7 +50,6 @@ const Insights = ({ tasks }) => {
     </div>
   );
 };
-
 export default Insights;
 
 
